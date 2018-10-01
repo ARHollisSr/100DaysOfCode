@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Survey Form</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h1 id="title">Survey Form</h1>
+<div id="form-outer">
+  <p id="description">What type of Developer are you?</p>
+  <form id="survey-form" method="GET" action="https://crossorigin.me/https://www.developer.com/">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">* Name: </label>
+      </div> 
+        <div class="rightTab">
+      <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your full name" required>
+    </div>
+<div class="rowTab">
+  <div class="labels">
+    <label id="email-label" for="email">* Email: </label>
+  </div>
+  <div class="rightTab">
+    <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email Address">
+  </div>
+</div>
+<div class="rowTab">
+  <div class="labels">
+    <label id="number-label" for="age">* Age: </label>
+  </div>
+  <div class="rightTab">
+    <input type="number" name="age" id="number" min="1" max="125" class="input-field" required placeholder="Age">
+  </div>
+</div>
+<div class="rowTab">
+  <div class="labels">
+    <label for="current-skill-level" for="email">Option that best describes your experience: </label>
+  </div>
+  <div class="rightTab">
+    <select id="dropdown" name="current-skill-level" class="dropdown">
+        <option disabled value>Select an option</option>  
+        <option value="senior-dev">Senior Dev</option>
+                <option value="junior-dev">Junior Dev</option>
+                <option value="newbie-dev">Newbie Dev</option>
+        <option value="no-experience">No Experience</option>
+        <option value="other">Other</option>
+     </select>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label for="expertise">*What is your area of expertise?</label>
+    </div>
+    <div class="rightTab">
+      <ul style="list-style: none;">
+        <li class="radio">
+          <label>Coding<input name="radio-buttons" value="1" type="radio" class="expertise"></label></li>
+        <li class="radio">
+          <label>Database<input name="radio-buttons" value="2" type="radio" class="expertise"></label></li>
+        <li class="radio">
+          <label>Design<input name="radio-buttons" value="3" type="radio" class="expertise"></label></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label for="most-enjoy">What do you enjoy most about being a Developer?</label>
+    </div>
+    <div class="rightTab">
+      <select id="most-enjoy" name="mostenjoy" class="dropdown">
+    <option disabled selected value>Select an option</option>
+    <option value="technology">Learning New Technology</option>
+    <option value="continuedLearning">Continued Learning</option>
+        <option value="challenges">Challenges</option>
+        <option value="problemsolving">User Feedback</option>
+  </select>
+    </div>
+  </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label for="preferences">Technologies/Areas that you would like to focus on in the future<br>(Check all that apply):</label>
+    </div>
+    <div class="rightTab">
+      <ul id="preferences" style="list-style: none;">
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">NodeJS</label></li>
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">MongoDB</label></li>
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">JavaScript</label></li>
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">ReactJS</label></li>
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">VueJS</label></li>
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Django</label></li>
+        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Angular</label></li>
+      </ul>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">Any additional Comments or information?</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" place="Enter your Awesome comments here..."></textarea>
+      </div>
+      <button id="submit" type="submit">Submit</button></form>
+    </div>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

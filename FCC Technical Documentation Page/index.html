@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Vim Technical Documentation Page</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <nav id="navbar">
+  <header>Vim Documentation</header>
+  <ul>
+    <a class="nav-link" href="#Introduction" rel="internal">
+      <li>Introduction</li>
+    </a>
+    <a class="nav-link" href="#Setting_up_Vim" rel="internal">
+      <li>Setting up Vim</li>
+    </a>
+    <a class="nav-link" href="#Linting" rel="internal">
+      <li>Linting</li>
+    </a>
+    <a class="nav-link" href="#ESLint_and_Prettier" rel="internal">
+      <li>ESLint and Prettier</li>
+    </a>
+    <a class="nav-link" href="#Autocomplete" rel="internal">
+      <li>Autocomplete</li>
+    </a>
+    <a class="nav-link" href="#Reference" rel="internal">
+      <li>Reference</li>
+    </a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>The joy of writing in JavaScript can also be impacted by the tools that you as a developer choose to use. There are a number of tools available to enhance your experience and improve the overall quality of your code, i.e., linters, typo correction, type-checking.
+        Although a lot of these tools are stand-alone, their usefulness can be greatly compounded if included with your development editor.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Setting_up_Vim">
+    <header>Setting up Vim</header>
+    <article>
+      <p>For the sake of this text, the suggestion here is to use Neovim versus vanilla Vim. Vanilla Vim may not have all of the suggested plugin-ins which are available in Neovim. </p>
+    </article>
+  </section>
+  <section class="main-section" id="Linting">
+    <header>Linting</header>
+    <article>
+      <p>From a high level, a linter looks at your code and reveals any potential errors without having to discover them at runtime. As of this writing, the most popular linter for JavaScript is ESLint; it supports modern JS features, JSX and it can be extended
+        with additional features.</p>
+      <p>To get up an running with ESLint requires a few simple steps that are to be run from within your existing JavaScript project:</p>
+
+      <code>yarn add -D eslint 
+yarn eslint -- --init
+
+# Or, if you're using npm
+
+npm install -D eslint 
+./node_modules/.bin/eslint --init
+</code>
+      <div>
+        <h4>Code above: Installing ESLint via a project through Yarn or NPM</h4>
+      </div>
+      <p>Ther are a number of VIM Linters but I would recommend using Ale. As it has some very useful features that differ from other offerings, such as the ability to run linters asynchronously and checking your files while you type without requiring a save.
+      </p>
+      <p> Here are some other examples of using eslint.</p>
+      <code>
+        $ eslint foo.js
+/path/to/foo.js
+  1:5   error  'foo' is assigned a value but never used          no-unused-vars
+  3:10  error  'bar' is defined but never used                   no-unused-vars
+  5:1   error  Expected indentation of 1 tab but found 2 spaces  indent
+
+✖ 3 problems (3 errors, 0 warnings)
+  2 errors, 0 warnings potentially fixable with the `--fix` option.
+      </code>
+      <h4>Above code: example of default eslint output</h4>
+      <p> Here is another...</p>
+      <code>
+        let g:ale_lint_on_enter = 0
+      </code>
+      <h4>Above code: Ensuring the linter doesn't run after opening a file</h4>
+      <article>
+  </section>
+  <section class="main-section" id="ESLint_and_Prettier">
+    <header>ESLint and Prettier</header>
+    <article>
+      <p>Most coding styles are developed over time and more times than not are a matter of personal choice. However, if you are working professionally, you may have to adhere to team guidelines regarding styles. To this effect, tools like Prettier exist which aims to alleivate friction amongst team members by simply producing pefectly formatted code.</P>
+
+      <p>Coupled with ESLint to which has its own methods for formatting code. You can use a two step approach to fixing code in Vim:</p>
+      <ol>
+        <li>Configure ESLint to run Prettier automatically</li>
+        <li>Configure Vim to fix files through ESLint</li>
+      </ol>
+      This will allow Vim to reveal errors from ESLint and Prettier, basically fixing both at the same time.
+
+      <h4>Prettier through ESLint</h4>
+      <p>The first thing we want to do is to get ESLint reporting on Prettier errors. As luck would have it, there is a plugin/configuration pair for this situation.</p>
+
+      <p>To install peform the following:</p>
+
+      <code>
+yarn add -D prettier eslint-plugin-prettier eslint-config-prettier
+
+# Or, if you're using npm
+npm install -D prettier eslint-plugin-prettier eslint-config-prettier
+        </code>
+      <h4>Code above: Installing prettier for eslint.sh
+        <h4>
+
+          <p>Now update your ESLint configuration to look like the following:
+            <p>
+
+              <code>
+ {
+  “extends”: [
+    “eslint:recommended”,
+    “prettier”
+  ],
+  “plugins”: [
+    “prettier”
+  ],
+  “rules”: {
+    “prettier/prettier”: “error”
+  }
+}
+  </code>
+              <h4>Code above: .eslintrc</h4>
+
+              <p>Now running ESLint will report issues from ESLint and Prettier and fixing ESLint errors will fix Prettier ones too.</p>
+
+              <p>Here is a list of some Prettier Plugins:</p>
+              <ul>
+                <li>Python Prettier</li>
+                <li>Php Prettier</li>
+                <li>Swift Prettier</li>
+              </ul>
+              <p>Here are few notable Eslint plugins:</p>
+              <ul>
+                <li>eslint-cli - This is the eslint command that executes a local installed ESLint.</li>
+                <li>eslint-find-rules - Find built-in ESLint rules you don't have in your custom config</li>
+                <li>eslint-index - CLI for finding and managing rules in ESLint config files</li>
+              </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Autocomplete">
+    <header>Autocomplete</header>
+    <article>
+      <p>No JS enviornment is complete without a good autocomplete experience. Out of the box VIM has some basic functionality through omnicomplete. However, you can do better with tools like TypeScript and Flow.</p>
+
+      <p>The most recommeded plugin for a richer autocomplete experience is deoplete. Deoplete includes a framework for assiting in the autocompletion of data using Vim. Here are a few recommended plugins:</p>
+
+      <ul>
+        <li>deoplete-ternjs - - Autocomplete powered by Tern</li>
+        <li>deoplete-flow - - Autocomplete powered by Flow</li>
+        <li>nvim-typescript -- Provides Deoplete suggestions and a host of other tools for TypeScript development</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <li>All the documentation from this page has been sourced from <a href="https://medium.com/@alexlafroscia/writing-js-in-vim-4c971a95fd49" target="_blank">HERE</a>
+    </article>
+  </section>
+</main>
+  
+  
+
+</body>
+
+</html>
