@@ -1,0 +1,2 @@
+var projectName = 'tribute-page';
+localStorage.setItem("FCC_RWD_Project", "Sega Tribute Page");
