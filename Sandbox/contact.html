@@ -21,14 +21,31 @@
     </nav>
     <main>
         <section>
-            <article>
-                <p>Message</p>
-            </article>
+            <form name="myform" method="GET" action="process.php">
+                <label for="myName">Name:</label>
+                <p><input type="text" name="myName" maxlength="15"></p>
+                <label for="myAge">Age:</label>
+                <p><input type="range" name="myAge" min="13" max="100" value="35"></p>
+                <label for="myEmail">Email:</label>
+                <p><input type="email" name="myEamil"></p>
+                <label for="myPhone">Phone:</label>
+                <p><input type="tel" name="myPhone"></p>
+                <label for="myWebsite">Website:</label>
+                <p><input type="url" name="myWebsite"></p>
+                <label for="myColor">Select a color:</label>
+                <p><input type="color" name="myColor" value="#99BB00"></p>
+                <label for="myDate">Select a date:</label>
+                <p><input type="date" name="myDate" value="2018-10-06"></p>
+                <p><input type="image" src="images/buttonsubmit.png" width="100"></p>
+                <p><input type="submit" value="Send"></p>
+                <p><button type="submit">Send Form</button></p>
+            </form>
         </section>
     </main>
     <footer>
         <address>Happy Falls, Michigan</address>
         <small>&copy;2018 <a href="http://somefakesight.com" target="_blank">Some Fake Sight</a></small>
     </footer>
-    </body>
+</body>
+
 </html>
