@@ -36,6 +36,24 @@
                 <p><input type="color" name="myColor" value="#99BB00"></p>
                 <label for="myDate">Select a date:</label>
                 <p><input type="date" name="myDate" value="2018-10-06"></p>
+                <label for="booklist">Books:</label>
+                <select name="book" id="booklist">
+                    <option value "1">IT</option>
+                    <option value "2">Carrie</option>
+                    <option value "3">The Shinning</option>
+                    <option value "4">Misery</option>
+                </select>                             
+                <datalist id="mydata">
+                    <option value="12123123" lable="Phone1"></option>
+                    <option value="456456445" lable="Phone2"></option>
+                </datalist>
+                <p><label>Phone:<input type="tel" name="myPhone" list="mydata"></label></p>
+                <label for="myText">Text:</label>
+                <p><textarea name="myText" cols="50" rows="6"></textarea></p>
+                <label for="myProgress">Progress Bar:</label>
+                <progress id="myProgress" value="30" max="100">0%</progress>
+                <label for="myMeter">Metered:</label>
+                <meter id="myMeter" value="60" min="0" max="100" low="40" high="80" optimum="100">60</meter>
                 <p><input type="image" src="images/buttonsubmit.png" width="100"></p>
                 <p><input type="submit" value="Send"></p>
                 <p><button type="submit">Send Form</button></p>
