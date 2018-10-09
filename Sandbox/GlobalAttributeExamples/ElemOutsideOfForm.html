@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+<body>
+    <nav>
+        <!-- element outside of form but will be included with form submission -->
+        <p><input type="search" name="mySearch" form="myForm">
+    </nav>
+    <section>
+        <form name="myForm" method="GET" action="../Php Test/process.php">
+        <p><input type="submit" value="Send"></p>
+        </form>
+    </section>
+</body>
+</html>
