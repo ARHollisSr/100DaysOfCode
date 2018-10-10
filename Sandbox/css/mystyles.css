@@ -1,3 +1,22 @@
 main p {
+    font-size: 24px;
+}
+
+section > p {
     font-size: 20px;
 }
+
+#mytext {
+    font-size: 18px;
+}
+
+.mytext {
+    font-size: 36px;
+}
+
+/* referencing only <p> elements that have a name attribute */
+p[name] {
+    font-size: 10px;
+}
+
+p[name="myte"]
