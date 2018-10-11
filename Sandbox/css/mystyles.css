@@ -1,33 +1,9 @@
-main p {
-    font-size: 24px;
-}
-
-section > p {
-    font-size: 20px;
-}
-
-#mytext {
-    font-size: 18px;
-}
-
-.mytext {
-    font-size: 36px;
-}
 
 /* referencing only <p> elements that have a name attribute */
-p[name] {
-    font-size: 10px;
-}
 
-p[name="mytest"]
-{
-    font-size: 22px;
+#title {
+    font: bold 36px Verdana, sans-serif;
 }
-
-p:nth-child(odd) {
-    background-color: #9999;
+#description {
+    text-align: center;
 }
-p:nth-child(even) {
-    background-color: rgba(184, 176, 176, 0.8);
-}
-
