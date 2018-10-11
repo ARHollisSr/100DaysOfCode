@@ -23,3 +23,11 @@ p[name="mytest"]
 {
     font-size: 22px;
 }
+
+p:nth-child(odd) {
+    background-color: #9999;
+}
+p:nth-child(even) {
+    background-color: rgba(184, 176, 176, 0.8);
+}
+
