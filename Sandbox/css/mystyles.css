@@ -3,13 +3,22 @@
 
 #title {
     font: bold 36px MyNewFont, Verdana, sans-serif;
+    color: #cccccc;
 }
 @font-face {
     font-family: "MyNewFont";
-    src:url("../fonts/Belinda\ Script.ttf")
+    src:url("../fonts/Hestina\ Font\ by\ Keithzo\ \(7NTypes\).otf")
 }
 #description {
     text-align: center;
+    width: 450px;
+    height: 200px;
+    overflow: scroll;
+}
+
+header {
+    margin: 30px;
+    padding: 15px;
 }
 
 a {
