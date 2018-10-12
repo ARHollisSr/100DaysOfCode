@@ -2,8 +2,17 @@
 /* referencing only <p> elements that have a name attribute */
 
 #title {
-    font: bold 36px Verdana, sans-serif;
+    font: bold 36px MyNewFont, Verdana, sans-serif;
+}
+@font-face {
+    font-family: "MyNewFont";
+    src:url("../fonts/Belinda\ Script.ttf")
 }
 #description {
     text-align: center;
 }
+
+a {
+    text-decoration: none;
+}
+
