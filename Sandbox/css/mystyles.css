@@ -20,7 +20,7 @@ header {
     margin: 30px;
     padding: 15px;
     text-align: center;
-    background-image:url("../images/bricks.jpg");    
+    background: #cccc url("../images/brickslight.jpg") repeat-y;  
 }
 
 a {
