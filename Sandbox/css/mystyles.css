@@ -7,7 +7,7 @@
 }
 @font-face {
     font-family: "MyNewFont";
-    src:url("../fonts/Hestina\ Font\ by\ Keithzo\ \(7NTypes\).otf")
+    src:url("../fonts/OneTime.ttf")
 }
 #description {
     text-align: center;
@@ -21,10 +21,8 @@ header {
     margin: 30px;
     padding: 15px;
     text-align: center;
-    border: 29px solid;
-    border-image-source: url("../images/diamonds.png");
-    border-image-slice: 29;
-    border-image-repeat: stretch;
+    border: 5px solid;
+    box-shadow: rgb(128, 123, 123) 5px, 5px 20px 10px;
 }
 
 a {
