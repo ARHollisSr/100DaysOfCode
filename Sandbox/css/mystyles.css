@@ -28,9 +28,47 @@ header {
 a {
     text-decoration: none;
 }
-
+section {
+    background-color: #cccccc;
+    overflow: auto;
+}
 section img {
     float: left;
     margin: 0px 10px;
+}
+#parentbox {
+    width: 600px;
+    border: 1px solid;
+}
+#box-1{
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #AAAA;
+}
+#box-2{
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #CCCC;
+}
+#box-3{
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #AAAA;
+}
+#box-4{
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    background-color: #CCCC;
+}
+.clearfloat {
+    clear: both;
 }
 
